@@ -10,7 +10,7 @@
 function isValid(string1, string2) {
     // longer and shorter string
     const s1 = string1.length > string2.length ? string1 : string2 
-    const s2 = string1.length < string2.length ? string2 : string1
+    const s2 = string1.length > string2.length ? string2 : string1 
 
     if ((s1.length - s2.length) > 1) return false
 
@@ -42,5 +42,6 @@ function isValid(string1, string2) {
     return true
 }
 
-// Tests
-console.log(isValid('pale', 'ale'))
+console.log(isValid('pale', 'pa'))
+
+module.exports = isValid
