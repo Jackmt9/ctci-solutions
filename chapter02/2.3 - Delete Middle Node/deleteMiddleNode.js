@@ -9,31 +9,17 @@ class LinkedList {
 }
 
 // O(n) time | O(1) space
-function deleteMiddleNode(head) {
+function deleteMiddleNode(node) {
+    if (node === null || node.next === null) return false
 
-    let length = 0
-
-    let runner = head
-
-    // Sets length to be the total amount of nodes
-    while (runner !== null) {
-        length++
-        runner = runner.next
-    }
-
-    // If less than two nodes don't do anything
-    if (length <= 2) return
-
-    let node = head
-
-    // Removes the lower middle number in an even amount of nodes
-    for (let i = 0; i < Math.ceil(length / 2) - 2; i++) {
-        node = node.next
-    }
-
+    node.data = node.next.data
     node.next = node.next.next
+
+    return true
 }
 
+// Constraints:
+// - Unable to tell if node is head of list
 
 exports.LinkedList = LinkedList
 exports.deleteMiddleNode = deleteMiddleNode

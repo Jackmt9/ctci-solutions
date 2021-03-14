@@ -1,32 +1,37 @@
 const LinkedList = require('./deleteMiddleNode').LinkedList
 const deleteMiddleNode = require('./deleteMiddleNode').deleteMiddleNode
 
-test('Linked list with 2 nodes', () => {
+test('Last node', () => {
     const head = new LinkedList(1)
-    head.next = new LinkedList(2)
+    const node2 = new LinkedList(2)
+    head.next = node2
    
     const expectedLinkedList = new LinkedList(1)
     expectedLinkedList.next = new LinkedList(2)
 
-    deleteMiddleNode(head)
+    expect(deleteMiddleNode(node2)).toBe(false)
     expect(head).toEqual(expectedLinkedList)
 })
 
-test('Linked list with 3 nodes', () => {
+
+// Problems with below tests!
+test('Second to last node', () => {
     const head = new LinkedList(1)
-    head.next = new LinkedList(2)
+    const middleNode = new LinkedList(2)
+    head.next = middleNode
     head.next.next = new LinkedList(3)
    
     const expectedLinkedList = new LinkedList(1)
     expectedLinkedList.next = new LinkedList(3)
 
-    deleteMiddleNode(head)
+    expect(deleteMiddleNode(middleNode)).toBe(true)
     expect(head).toEqual(expectedLinkedList)
 })
 
-test('Linked list with 4 nodes', () => {
+test('Middle node with two nodes to right', () => {
     const head = new LinkedList(1)
-    head.next = new LinkedList(2)
+    const middleNode = new LinkedList(2)
+    head.next = middleNode
     head.next.next = new LinkedList(3)
     head.next.next.next = new LinkedList(4)
    
@@ -34,6 +39,6 @@ test('Linked list with 4 nodes', () => {
     expectedLinkedList.next = new LinkedList(3)
     expectedLinkedList.next.next = new LinkedList(4)
 
-    deleteMiddleNode(head)
+    expect(deleteMiddleNode(middleNode)).toBe(true)
     expect(head).toEqual(expectedLinkedList)
 })
