@@ -11,5 +11,5 @@ test('Basic Matrix', () => {
         [8,5,2],
         [9,6,3]
     ]
-    test(rotateMatrix(matrix)).toBe(rotatedMatrix)
+    expect(rotateMatrix(matrix)).toBe(rotatedMatrix)
 })
