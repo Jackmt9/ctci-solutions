@@ -26,5 +26,4 @@ function isPalindromePermutation(string) {
 // Whitespace ignored
 
 
-// Tests
-console.log(isPalindromePermutation("taco cat"))
+module.exports = isPalindromePermutation
