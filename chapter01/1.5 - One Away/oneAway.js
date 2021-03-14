@@ -42,6 +42,5 @@ function isValid(string1, string2) {
     return true
 }
 
-console.log(isValid('pale', 'pa'))
 
 module.exports = isValid
