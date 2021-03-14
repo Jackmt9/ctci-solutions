@@ -36,5 +36,4 @@ function isPermutation(s1, s2) {
 // Whitespace is significant
 
 
-// Tests
-console.log(isPermutation('done', 'enod'))
+module.exports = isPermutation
