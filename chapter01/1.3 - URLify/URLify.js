@@ -37,3 +37,4 @@ function replaceSpaces(string, length) {
 
 // Tests
 console.log(replaceSpaces("Mr John Smith ", 13))
+module.exports = replaceSpaces
