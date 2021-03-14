@@ -26,20 +26,8 @@ function isUnique(string) {
 // }
 
 
-// Tests
+// Constraints:
+// - Doesn't account for whitespace
 
 
-// describe("See if string is composed of soley unique characters", () => {
-//     it("s = 'taco'", () => {
-//         expect(isUnique('taco')).toEqual(true)
-//     })
-//     it("s = 'avocado'", () => {
-//         expect(isUnique('avocado')).toEqual(false)
-//     })
-//     it("s = 'marshmello'", () => {
-//         expect(isUnique('marshmello')).toEqual(false)
-//     })
-//     it("s = 'aaaaa'", () => {
-//         expect(isUnique('aaaaa')).toEqual(false)
-//     })
-// })
+module.exports = isUnique
